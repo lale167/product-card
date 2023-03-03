@@ -1,0 +1,188 @@
+:root {
+--dark-cyan: hsl(158, 36%, 37%);
+--cream: hsl(30, 38%, 92%);
+
+--dark-blue: hsl(212, 21%, 14%);
+--gray-blue: hsl(228, 12%, 48%);
+--white: hsl(0, 0%, 100%);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100vh;
+    background-color: var(--cream);
+    /* font-family: 'Fraunces', serif; */
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* CARD */
+
+.container {
+    display: flex;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    border: none;
+}
+
+.picture {
+    line-height: 0;
+    display: block;
+}
+
+.text {
+    width: 340px;
+    height: 510px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 2rem;
+    justify-content: space-between;
+}
+
+.price  {
+    display: flex;
+}
+
+/* TYPOGRAPHY */
+
+.perfume {
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    color: var(--gray-blue);
+    letter-spacing: 5px;
+    line-height: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.title {
+    font-family: 'Fraunces', serif;
+    color: var(--dark-blue);
+    font-size: 2.375rem;
+    font-weight: 700;
+    line-height: 2.375rem;
+}
+
+.text {
+    color: var(--gray-blue);
+    font-size: 16px;
+    line-height: 1.75rem;
+}
+
+.price-main {
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark-cyan);
+    padding-right: 1.5rem;
+}
+
+.price-aside {
+    color: var(--gray-blue);
+    text-decoration: line-through;
+}
+
+.button {
+    display: flex;
+    height: 3rem;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--dark-cyan);
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.button img {
+    padding-right: 0.75rem;
+}
+
+.button-text-container {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    font-weight: 700;
+    color: var(--white);
+}
+
+/* ATTRIBUTION */
+
+.attribution {
+    font-size: 11px; text-align: center; 
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--cream);
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* MEDIA */
+
+@media (max-width: 900px) {
+    .container {
+        display: unset;
+        position: absolute;
+        transform: unset;
+        top: unset;
+        left: 50%;
+        transform: translate(-50%, 5%);
+    }
+
+    .picture {
+        line-height: 0;
+    }
+
+    .perfume {
+        font-size: 0.8rem;
+        padding: 0;
+    }
+
+    .title {
+        font-size: 1.75rem;
+        line-height: 1.75rem;
+    }
+
+    .text {
+        width: 300px;
+        height: 350px;
+        padding: 1.75rem;
+    }
+
+    .description {
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+        margin-top: -0.5rem;
+    }
+
+    .price-main {
+        font-size: 1.75rem;
+    }
+
+    .price-aside {
+        font-size: 0.75rem;
+    }
+}
